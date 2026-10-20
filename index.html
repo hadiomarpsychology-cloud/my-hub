@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hadi Omar — Sovereign Hub</title>
+    <title>Hadi Omar — Psychological Counselor & Musician</title>
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -16,48 +16,76 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
         body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .container { max-width: 700px; width: 100%; }
-        header { text-align: center; margin-bottom: 40px; }
-        h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.025em; }
-        .subtitle { color: var(--text-muted); font-size: 1rem; }
-        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 30px; margin-bottom: 24px; transition: border-color 0.2s; }
+        .container { max-width: 650px; width: 100%; }
+        header { text-align: center; margin-bottom: 35px; }
+        h1 { font-size: 2.3rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.025em; }
+        .subtitle { color: var(--text-main); font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
+        .sub-desc { color: var(--text-muted); font-size: 0.9rem; }
+        
+        .section-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin: 30px 0 12px 4px; font-weight: 700; }
+        
+        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; transition: border-color 0.2s; }
         .card:hover { border-color: var(--accent); }
-        .card h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-        .card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
-        .btn { display: inline-block; background-color: var(--accent); color: #000; font-weight: 600; padding: 12px 24px; border-radius: 8px; text-decoration: none; transition: background-color 0.2s; }
-        .btn:hover { background-color: var(--accent-hover); }
-        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
-        footer { text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); width: 100%; max-width: 700px; padding-top: 20px; }
+        .card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: var(--text-main); }
+        .card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; }
+        
+        .btn { display: block; width: 100%; text-align: center; background-color: var(--card-bg); border: 1px solid var(--accent); color: var(--accent); font-weight: 600; padding: 14px 20px; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
+        .btn:hover { background-color: var(--accent); color: #000; }
+        
+        .rates-box { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; }
+        .rates-title { color: var(--accent); font-weight: 700; font-size: 1rem; margin-bottom: 12px; }
+        .rate-row { display: flex; justify-content: space-between; font-size: 0.95rem; margin-bottom: 8px; color: var(--text-main); }
+        .rate-row span:last-child { font-weight: 600; color: var(--accent); }
+        .rates-note { color: var(--text-muted); font-size: 0.8rem; margin-top: 14px; border-top: 1px solid var(--border-color); padding-top: 10px; }
+
+        footer { text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); width: 100%; max-width: 650px; padding-top: 20px; }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Hadi Omar</h1>
-            <p class="subtitle">Psychological Research • Structural Analysis • Audio Production</p>
+            <div class="subtitle">Psychological Counselor • Educator • Musician</div>
+            <div class="sub-desc">M.Sc. Candidate | Global Resonance Practice</div>
         </header>
 
-        <!-- Master Publication -->
-        <div class="card">
-            <h2>📖 Master Publication</h2>
-            <p><strong>The Architecture of Containment: Ideology, Law, Elimination, and Cartography in the Global Order</strong><br>An uncompromised compendium decoding the invisible systems of state power, legal exclusion, spatial cartography, and ideological hegemony governing the contemporary order.</p>
-            <a href="The_Architecture_of_Containment_Complete_Master.txt" class="btn" download>Download Master Text</a>
+        <!-- Complimentary Gift -->
+        <div class="card" style="border-color: #38bdf8;">
+            <h2>🎁 Complimentary Gift: "A Quiet Room for Your Mind" (4:12)</h2>
+            <p>A 60 BPM grounding audio track calibrated to match a calm resting heart rate. Listen before your consultation to ease nervous system tension.</p>
+            <a href="#" class="btn" style="background: var(--accent); color: #000;">Play Grounding Track (MP3)</a>
         </div>
 
-        <!-- Creative & Audio -->
-        <div class="card">
-            <h2>🎵 Creative & Audio Production (Barq)</h2>
-            <p>Original music compositions, copyright-protected sound recordings, and high-frequency rhythm projects (including the <em>ÆfrÎcân Řiddèm</em> audio library and <em>Jamalek</em>).</p>
-            <a href="#" class="btn">Listen to Featured Mix</a>
+        <div class="section-title">Psychology & Counseling</div>
+        
+        <div class="card" style="padding: 0; border: none;">
+            <a href="mailto:hadiomarpsychology@gmail.com" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main); font-size: 1.05k;">Book Private Consultation</a>
         </div>
 
-        <!-- Direct Consulting & Contact -->
+        <div class="rates-box">
+            <div class="rates-title">Transparent Equity Rates</div>
+            <div class="rate-row"><span>Student & Community Rate:</span> <span>50 NIS (~$13.50)</span></div>
+            <div class="rate-row"><span>Women's Equity Rate:</span> <span>75 NIS (~$20.00)</span></div>
+            <div class="rate-row"><span>Standard Professional Rate:</span> <span>100 NIS (~$27.00)</span></div>
+            <div class="rates-note">Pro-bono emergency slots reserved monthly for acute crisis cases.</div>
+        </div>
+
+        <div class="section-title">Academic & Language Tutoring</div>
+        <div class="card" style="padding: 0; border: none;">
+            <a href="https://www.preply.com" target="_blank" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">Book Lesson on Preply</a>
+        </div>
+
+        <div class="section-title">Music & Creative Releases</div>
+        <div class="card" style="padding: 0; border: none; margin-bottom: 10px;">
+            <a href="#" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main); margin-bottom: 12px;">Stream Main Catalog</a>
+            <a href="#" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">Listen to Beats & Experiments</a>
+        </div>
+
+        <div class="section-title">Master Publication</div>
         <div class="card">
-            <h2>💼 Professional Services & Consulting</h2>
-            <p>Leveraging formal training in psychology from An-Najah University alongside advanced qualitative research and structural list-building methodology. Available for analytical consulting, psychological research support, and media editing.</p>
-            <div class="btn-group">
-                <a href="mailto:hadiomarpsychology@gmail.com" class="btn">Direct Email</a>
-            </div>
+            <h2>📖 The Architecture of Containment</h2>
+            <p>An uncompromised compendium decoding the invisible systems of state power, legal exclusion, and spatial cartography.</p>
+            <a href="The_Architecture_of_Containment_Complete_Master.txt" class="btn" download style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">Download Master Text</a>
         </div>
     </div>
 
