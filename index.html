@@ -32,6 +32,8 @@
         .btn { display: block; width: 100%; text-align: center; background-color: var(--card-bg); border: 1px solid var(--accent); color: var(--accent); font-weight: 600; padding: 14px 20px; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
         .btn:hover { background-color: var(--accent); color: #000; }
         
+        audio { width: 100%; margin-top: 10px; accent-color: var(--accent); }
+
         .rates-box { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; }
         .rates-title { color: var(--accent); font-weight: 700; font-size: 1rem; margin-bottom: 12px; }
         .rate-row { display: flex; justify-content: space-between; font-size: 0.95rem; margin-bottom: 8px; color: var(--text-main); }
@@ -49,17 +51,20 @@
             <div class="sub-desc">M.Sc. Candidate | Global Resonance Practice</div>
         </header>
 
-        <!-- Complimentary Gift -->
+        <!-- Complimentary Gift with Working Audio Player -->
         <div class="card" style="border-color: #38bdf8;">
             <h2>🎁 Complimentary Gift: "A Quiet Room for Your Mind" (4:12)</h2>
             <p>A 60 BPM grounding audio track calibrated to match a calm resting heart rate. Listen before your consultation to ease nervous system tension.</p>
-            <a href="#" class="btn" style="background: var(--accent); color: #000;">Play Grounding Track (MP3)</a>
+            <audio controls>
+                <source src="quiet-room.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         </div>
 
         <div class="section-title">Psychology & Counseling</div>
         
         <div class="card" style="padding: 0; border: none;">
-            <a href="mailto:hadiomarpsychology@gmail.com" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main); font-size: 1.05k;">Book Private Consultation</a>
+            <a href="mailto:hadiomarpsychology@gmail.com" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">Book Private Consultation</a>
         </div>
 
         <div class="rates-box">
