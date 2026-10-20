@@ -23,25 +23,27 @@
       min-height: 100vh;
     }
     .container {
-      width: 100%; max-width: 480px;
+      width: 100%; max-width: 520px;
       padding: 2.5rem 1.25rem; box-sizing: border-box;
       text-align: center;
     }
     h1 { margin: 0 0 0.5rem 0; font-size: 1.75rem; font-weight: 700; }
     p.subtitle { margin: 0 0 1.5rem 0; color: var(--subtext); font-size: 0.95rem; line-height: 1.4; }
     .section-title {
-      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;
-      color: var(--subtext); margin: 1.75rem 0 0.75rem 0; text-align: left;
+      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--subtext); margin: 2rem 0 0.75rem 0; text-align: left;
     }
     .btn {
       display: block; width: 100%; padding: 1rem; margin-bottom: 0.75rem;
       background-color: var(--card-bg); color: var(--text); text-decoration: none;
       border-radius: 10px; font-weight: 500; font-size: 0.95rem; box-sizing: border-box;
       border: 1px solid #2d2d2d; transition: border-color 0.2s ease;
+      text-align: center;
     }
     .btn:hover { border-color: var(--accent); }
     .btn-primary { border-color: var(--accent); color: #60a5fa; }
     
+    /* CREDENTIALS BADGE */
     .cred-card {
       background-color: var(--badge-bg);
       border: 1px solid #3b82f6;
@@ -74,25 +76,61 @@
       line-height: 1.35;
     }
 
-    .pricing-card {
+    /* SERVICES & PRICING MENU */
+    .menu-card {
       background-color: var(--price-bg);
       border-radius: 10px;
-      padding: 1rem;
-      margin-bottom: 1rem;
+      padding: 1.1rem;
+      margin-bottom: 1.25rem;
       text-align: left;
       font-size: 0.85rem;
       border: 1px solid #333;
     }
-    .price-row {
-      display: flex; justify-content: space-between;
-      margin-bottom: 0.5rem; color: var(--text);
+    .menu-header {
+      font-weight: 700;
+      color: #60a5fa;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.4rem;
     }
+    .service-item {
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px dotted #383838;
+    }
+    .service-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .service-name {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .service-desc {
+      color: var(--subtext);
+      font-size: 0.8rem;
+      margin: 0.3rem 0 0.4rem 0;
+      line-height: 1.35;
+    }
+    .price-tag {
+      color: #34d399;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* GIFT BOX */
     .gift-box {
       background-color: #1a2332;
       border: 1px solid #2563eb;
       border-radius: 10px;
       padding: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       text-align: left;
     }
     .gift-title { font-weight: 600; color: #60a5fa; margin-bottom: 0.25rem; font-size: 0.9rem; }
@@ -117,8 +155,8 @@
 
     <!-- GROUNDING GIFT -->
     <div class="gift-box">
-      <div class="gift-title">🎧 A Gift Before We Begin - Room to Breathe</div>
-      <p class="gift-desc">A soothing grounding composition calibrated to 60 BPM (matching a calm resting heart rate). Play below or download the file.</p>
+      <div class="gift-title">🎧 Grounding Gift - Room to Breathe</div>
+      <p class="gift-desc">A soothing grounding composition calibrated to 60 BPM (matching a calm resting heart rate) using Hi-Tops & resonant frameworks. Listen below or download.</p>
       
       <audio controls src="gift.mp3" preload="metadata"></audio>
       
@@ -136,18 +174,59 @@
       <div class="cred-item"><strong>Clinical Training:</strong> 480 Supervised Hrs (Palestinian Counseling Center) • 100 Field Hrs (Jood Center)</div>
 
       <div class="cred-subhead">Higher Education History</div>
-      <div class="cred-item"><strong>M.Sc. Clinical Psychology:</strong> An-Najah National University (In Progress, 3.33/4.00 GPA)</div>
-      <div class="cred-item"><strong>B.A. Psychology (Minor Women's Studies):</strong> Birzeit University (76.4% / Good, 120 Credits)</div>
+      <div class="cred-item"><strong>M.Sc. Clinical Psychology:</strong> An-Najah National University (In Progress, GPA 3.33)</div>
+      <div class="cred-item"><strong>B.A. Psychology (Minor Women's Studies):</strong> Birzeit University (120 Credits)</div>
       <div class="cred-item"><strong>Higher Education Studies in Psychology:</strong> University of Sussex, UK (FHEQ Levels 4 & 5)</div>
-      <div class="cred-item"><strong>Foundation Cert. (Business, Law & Social Sciences):</strong> University of Sheffield International College, UK</div>
-      <div class="cred-item"><strong>Secondary Education:</strong> International School of London Qatar (US High School Diploma, 35 Total Credits)</div>
+      <div class="cred-item"><strong>Foundation Certificate:</strong> University of Sheffield International College, UK</div>
+      <div class="cred-item"><strong>Secondary Education:</strong> International School of London Qatar (35 Total Credits)</div>
 
-      <div class="cred-subhead">Leadership, Diplomacy & MUN Experience</div>
-      <div class="cred-item"><strong>Model United Nations (MUN):</strong> Extensive experience in diplomatic debate, international law resolution drafting, public speaking, and committee moderation across international educational frameworks.</div>
+      <div class="cred-subhead">Leadership & Public Diplomacy</div>
+      <div class="cred-item"><strong>Model United Nations (MUN):</strong> Extensive experience in diplomatic debate, international resolution drafting, and committee moderation.</div>
+    </div>
+
+    <!-- SERVICES & PRICE LIST MENU -->
+    <div class="menu-card">
+      <div class="menu-header">📋 Mental Health Service Menu & Frameworks</div>
+      
+      <div class="service-item">
+        <div class="service-name">
+          <span>Individual Psychotherapy</span>
+          <span class="price-tag">50 – 100 NIS</span>
+        </div>
+        <div class="service-desc">One-on-one evidence-based therapy sessions tailored for personal growth, anxiety management, and trauma recovery.</div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-name">
+          <span>Family Therapy</span>
+          <span class="price-tag">100 – 150 NIS</span>
+        </div>
+        <div class="service-desc">Systemic therapy focusing on family communication, conflict resolution, and relational healing.</div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-name">
+          <span>Couples Counseling</span>
+          <span class="price-tag">100 – 150 NIS</span>
+        </div>
+        <div class="service-desc">Collaborative sessions designed to strengthen intimacy, active listening, and relationship stability.</div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-name">
+          <span>Group Therapy</span>
+          <span class="price-tag">40 – 60 NIS / person</span>
+        </div>
+        <div class="service-desc">Facilitated peer-support circles using specialized psychological frameworks for collective resilience.</div>
+      </div>
+
+      <div style="font-size:0.75rem; color:var(--subtext); margin-top:0.75rem; padding-top:0.5rem; border-top:1px dashed #383838;">
+        💡 <em>Includes transparent equity rates (Student/Community 50 NIS, Women's Equity 75 NIS, Standard 100 NIS) & close network discounts. Pro-bono emergency slots reserved monthly.</em>
+      </div>
     </div>
 
     <!-- PSYCHOLOGY SECTION -->
-    <div class="section-title">Psychology & Counseling Contacts</div>
+    <div class="section-title">Book a Consultation</div>
     <a href="mailto:hadiaugustpsychology@gmail.com?subject=Private%20Counseling%20Inquiry" class="btn btn-primary">
       ✉️ Email for Consultation<br>
       <small style="font-size:0.75rem; color:#9ca3af; font-weight:normal;">hadiaugustpsychology@gmail.com</small>
@@ -155,15 +234,6 @@
     <a href="https://wa.me/970569903815" target="_blank" rel="noopener" class="btn">💬 WhatsApp: +970 56-990-3815 (Ooredoo/Jawwal)</a>
     <a href="https://wa.me/972599280443" target="_blank" rel="noopener" class="btn">💬 WhatsApp: +972 59-928-0443 (Jawwal / Local)</a>
     <a href="https://www.instagram.com/hadithepsychologist/" target="_blank" rel="noopener" class="btn">📸 Instagram: @hadithepsychologist</a>
-
-    <!-- TRANSPARENT PRICING -->
-    <div class="pricing-card" style="margin-top: 1.5rem;">
-      <div style="font-weight:600; margin-bottom:0.5rem; color:#60a5fa;">Transparent Equity Rates</div>
-      <div class="price-row"><span>Student & Community Rate:</span> <strong>50 NIS (~$13.50)</strong></div>
-      <div class="price-row"><span>Women's Equity Rate:</span> <strong>75 NIS (~$20.00)</strong></div>
-      <div class="price-row"><span>Standard Professional Rate:</span> <strong>100 NIS (~$27.00)</strong></div>
-      <div style="color:var(--subtext); font-size:0.75rem; margin-top:0.5rem;">Pro-bono emergency slots reserved monthly for acute crisis cases.</div>
-    </div>
 
     <!-- TUTORING SECTION -->
     <div class="section-title">Academic & Language Tutoring</div>
