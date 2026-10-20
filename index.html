@@ -54,19 +54,26 @@
       margin-bottom: 0.5rem; color: var(--text);
     }
     .gift-box {
-      display: block;
       background-color: #1a2332;
       border: 1px solid #2563eb;
       border-radius: 10px;
       padding: 1rem;
       margin-bottom: 1rem;
       text-align: left;
-      text-decoration: none;
-      transition: background-color 0.2s ease;
     }
-    .gift-box:hover { background-color: #202d42; }
     .gift-title { font-weight: 600; color: #60a5fa; margin-bottom: 0.25rem; font-size: 0.9rem; }
-    .gift-desc { font-size: 0.8rem; color: var(--subtext); margin: 0; line-height: 1.3; }
+    .gift-desc { font-size: 0.8rem; color: var(--subtext); margin: 0 0 0.75rem 0; line-height: 1.3; }
+    audio { width: 100%; height: 36px; margin-bottom: 0.5rem; border-radius: 6px; }
+    .download-btn {
+      display: inline-block;
+      padding: 0.5rem 0.8rem;
+      background-color: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
@@ -74,11 +81,19 @@
     <h1>Hadi August</h1>
     <p class="subtitle">Psychological Counselor • Educator • Musician<br><small>M.Sc. Candidate | Global Resonance Practice</small></p>
 
-    <!-- GROUNDING GIFT (CLICKABLE LINK) -->
-    <a href="YOUR_SONG_URL_HERE" target="_blank" rel="noopener" class="gift-box">
-      <div class="gift-title">🎧 Play Gift: "A Quiet Room for Your Mind" (4:12) ➔</div>
-      <p class="gift-desc">A 60 BPM grounding audio track calibrated to match a calm resting heart rate. Click to listen before your consultation.</p>
-    </a>
+    <!-- GROUNDING GIFT WITH FULL FILE AUDIO PLAYER & DOWNLOAD -->
+    <div class="gift-box">
+      <div class="gift-title">🎧 A Gift Before We Begin - Quiet Signal - Treblo</div>
+      <p class="gift-desc">A soothing grounding composition calibrated to 60 BPM (matching a calm resting heart rate)[span_0](start_span)[span_0](end_span). Play below or download the file.</p>
+      
+      <!-- Audio Player pointing to the exact filename -->
+      <audio controls src="A Gift Before We Begin - Quiet Signal - Treblo.wav" preload="metadata"></audio>
+      
+      <!-- Direct Download Button -->
+      <div style="text-align: right;">
+        <a href="A Gift Before We Begin - Quiet Signal - Treblo.wav" download="A Gift Before We Begin - Quiet Signal - Treblo.wav" class="download-btn">⬇️ Download Audio File</a>
+      </div>
+    </div>
 
     <!-- PSYCHOLOGY SECTION -->
     <div class="section-title">Psychology & Counseling Contacts</div>
