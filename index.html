@@ -1,101 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hadi Omar — Psychological Counselor & Musician</title>
-    <style>
-        :root {
-            --bg-color: #0b0f19;
-            --card-bg: #111827;
-            --border-color: #1f2937;
-            --text-main: #f9fafb;
-            --text-muted: #9ca3af;
-            --accent: #38bdf8;
-            --accent-hover: #0ea5e9;
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
-        .container { max-width: 650px; width: 100%; }
-        header { text-align: center; margin-bottom: 35px; }
-        h1 { font-size: 2.3rem; font-weight: 800; margin-bottom: 8px; letter-spacing: -0.025em; }
-        .subtitle { color: var(--text-main); font-size: 1.05rem; font-weight: 600; margin-bottom: 4px; }
-        .sub-desc { color: var(--text-muted); font-size: 0.9rem; }
-        
-        .section-title { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin: 30px 0 12px 4px; font-weight: 700; }
-        
-        .card { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; transition: border-color 0.2s; }
-        .card:hover { border-color: var(--accent); }
-        .card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; color: var(--text-main); }
-        .card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; }
-        
-        .btn { display: block; width: 100%; text-align: center; background-color: var(--card-bg); border: 1px solid var(--accent); color: var(--accent); font-weight: 600; padding: 14px 20px; border-radius: 8px; text-decoration: none; transition: all 0.2s; }
-        .btn:hover { background-color: var(--accent); color: #000; }
-        
-        audio { width: 100%; margin-top: 8px; accent-color: var(--accent); }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hadi August | Counseling, Tutoring & Music</title>
+  <style>
+    :root {
+      --bg: #121212;
+      --card-bg: #1e1e1e;
+      --accent: #3b82f6;
+      --text: #f3f4f6;
+      --subtext: #9ca3af;
+      --price-bg: #282828;
+      --badge-bg: #1e293b;
+    }
+    body {
+      margin: 0; padding: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      display: flex; justify-content: center;
+      min-height: 100vh;
+    }
+    .container {
+      width: 100%; max-width: 520px;
+      padding: 2.5rem 1.25rem; box-sizing: border-box;
+      text-align: center;
+    }
+    h1 { margin: 0 0 0.5rem 0; font-size: 1.75rem; font-weight: 700; }
+    p.subtitle { margin: 0 0 1.5rem 0; color: var(--subtext); font-size: 0.95rem; line-height: 1.4; }
+    .section-title {
+      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--subtext); margin: 2rem 0 0.75rem 0; text-align: left;
+    }
+    .btn {
+      display: block; width: 100%; padding: 1rem; margin-bottom: 0.75rem;
+      background-color: var(--card-bg); color: var(--text); text-decoration: none;
+      border-radius: 10px; font-weight: 500; font-size: 0.95rem; box-sizing: border-box;
+      border: 1px solid #2d2d2d; transition: border-color 0.2s ease;
+      text-align: center;
+    }
+    .btn:hover { border-color: var(--accent); }
+    .btn-primary { border-color: var(--accent); color: #60a5fa; }
+    
+    .cred-card {
+      background-color: var(--badge-bg);
+      border: 1px solid #3b82f6;
+      border-radius: 10px;
+      padding: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+    .cred-title {
+      font-weight: 700;
+      color: #60a5fa;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+    }
+    .cred-subhead {
+      font-weight: 600;
+      color: #93c5fd;
+      margin: 0.75rem 0 0.25rem 0;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .cred-item {
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      line-height: 1.35;
+    }
 
-        .rates-box { background-color: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; padding: 22px 24px; margin-bottom: 16px; }
-        .rates-title { color: var(--accent); font-weight: 700; font-size: 1rem; margin-bottom: 12px; }
-        .rate-row { display: flex; justify-content: space-between; font-size: 0.95rem; margin-bottom: 8px; color: var(--text-main); }
-        .rate-row span:last-child { font-weight: 600; color: var(--accent); }
-        .rates-note { color: var(--text-muted); font-size: 0.8rem; margin-top: 14px; border-top: 1px solid var(--border-color); padding-top: 10px; }
+    .menu-card {
+      background-color: var(--price-bg);
+      border-radius: 10px;
+      padding: 1.1rem;
+      margin-bottom: 1.25rem;
+      text-align: left;
+      font-size: 0.85rem;
+      border: 1px solid #333;
+    }
+    .menu-header {
+      font-weight: 700;
+      color: #60a5fa;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      border-bottom: 1px solid #444;
+      padding-bottom: 0.4rem;
+    }
+    .service-item {
+      margin-bottom: 1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px dotted #383838;
+    }
+    .service-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .service-name {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .service-desc {
+      color: var(--subtext);
+      font-size: 0.8rem;
+      margin: 0.3rem 0 0.4rem 0;
+      line-height: 1.35;
+    }
+    .price-tag {
+      color: #34d399;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+    .format-badge {
+      display: inline-block;
+      background-color: #1e293b;
+      color: #60a5fa;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-top: 0.2rem;
+      border: 1px solid #334155;
+    }
 
-        footer { text-align: center; margin-top: 40px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); width: 100%; max-width: 650px; padding-top: 20px; }
-    </style>
+    .public-space-card {
+      background-color: #1b281f;
+      border: 1px solid #059669;
+      border-radius: 10px;
+      padding: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+    .public-space-title {
+      font-weight: 700;
+      color: #34d399;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .gift-box {
+      background-color: #1a2332;
+      border: 1px solid #2563eb;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .gift-title { font-weight: 600; color: #60a5fa; margin-bottom: 0.25rem; font-size: 0.9rem; }
+    .gift-desc { font-size: 0.8rem; color: var(--subtext); margin: 0 0 0.75rem 0; line-height: 1.3; }
+    audio { width: 100%; height: 36px; margin-bottom: 0.5rem; border-radius: 6px; }
+    .download-btn {
+      display: inline-block;
+      padding: 0.5rem 0.8rem;
+      background-color: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Hadi Omar</h1>
-            <div class="subtitle">Psychological Counselor • Educator • Musician</div>
-            <div class="sub-desc">M.Sc. Candidate | Global Resonance Practice</div>
-        </header>
+  <div class="container">
+    <h1>Hadi August</h1>
+    <p class="subtitle">Psychological Counselor • Educator • Musician<br><small>M.Sc. Candidate | Global Resonance Practice</small></p>
 
-        <!-- Complimentary Gift -->
-        <div class="card" style="border-color: #38bdf8;">
-            <h2>🎁 Complimentary Gift: "A Quiet Room for Your Mind" (4:12)</h2>
-            <p>A 60 BPM grounding audio track calibrated to match a calm resting heart rate. Listen before your consultation to ease nervous system tension.</p>
-            <audio controls preload="auto">
-                <source src="quiet-room.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-
-        <div class="section-title">Psychology & Counseling</div>
-        
-        <div class="card" style="padding: 0; border: none;">
-            <a href="mailto:hadiomarpsychology@gmail.com" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">Book Private Consultation</a>
-        </div>
-
-        <div class="rates-box">
-            <div class="rates-title">Transparent Equity Rates</div>
-            <div class="rate-row"><span>Student & Community Rate:</span> <span>50 NIS (~$13.50)</span></div>
-            <div class="rate-row"><span>Women's Equity Rate:</span> <span>75 NIS (~$20.00)</span></div>
-            <div class="rate-row"><span>Standard Professional Rate:</span> <span>100 NIS (~$27.00)</span></div>
-            <div class="rates-note">Pro-bono emergency slots reserved monthly for acute crisis cases.</div>
-        </div>
-
-        <div class="section-title">Academic & Language Tutoring</div>
-        <div class="card" style="padding: 0; border: none;">
-            <a href="https://www.preply.com" target="_blank" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">Book Lesson on Preply</a>
-        </div>
-
-        <div class="section-title">Music & Creative Releases</div>
-        <div class="card" style="padding: 0; border: none; margin-bottom: 10px;">
-            <a href="#" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main); margin-bottom: 12px;">Stream Main Catalog</a>
-            <a href="#" class="btn" style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">Listen to Beats & Experiments</a>
-        </div>
-
-        <div class="section-title">Master Publication</div>
-        <div class="card">
-            <h2>📖 The Architecture of Containment</h2>
-            <p>An uncompromised compendium decoding the invisible systems of state power, legal exclusion, and spatial cartography.</p>
-            <a href="The_Architecture_of_Containment_Complete_Master.txt" class="btn" download style="background: var(--card-bg); border: 1px solid var(--border-color); color: var(--text-main);">Download Master Text</a>
-        </div>
+    
+    <div class="gift-box">
+      <div class="gift-title">🎧 Grounding Gift - Room to Breathe</div>
+      <p class="gift-desc">A soothing grounding composition calibrated to 60 BPM (matching a calm resting heart rate) using Hi-Tops & resonant frameworks. Listen below or download.</p>
+      
+      <audio controls src="gift.mp3" preload="metadata"></audio>
+      
+      <div style="text-align: right;">
+        <a href="gift.mp3" download="A Gift Before We Begin - Room to Breathe.mp3" class="download-btn">⬇️ Download Audio MP3</a>
+      </div>
     </div>
 
-    <footer>
-        &copy; 2026 Hadi Omar. All rights reserved. Sovereign Digital Infrastructure.
-    </footer>
+    
+    <div class="cred-card">
+      <div class="cred-title">🛡️ Professional Standing & Academic Credentials</div>
+      
+      <div class="cred-subhead">Clinical Accreditation & Licensure</div>
+      <div class="cred-item"><strong>Licensure:</strong> Member, Union of Psychological & Social Workers (ID: 410981989)</div>
+      <div class="cred-item"><strong>Clinical Training:</strong> 480 Supervised Hrs (Palestinian Counseling Center) • 100 Field Hrs (Jood Center)</div>
+
+      <div class="cred-subhead">Higher Education History</div>
+      <div class="cred-item"><strong>M.Sc. Clinical Psychology:</strong> An-Najah National University (In Progress, GPA 3.33)</div>
+      <div class="cred-item"><strong>B.A. Psychology (Minor Women's Studies):</strong> Birzeit University (120 Credits)</div>
+      <div class="cred-item"><strong>Higher Education Studies in Psychology:</strong> University of Sussex, UK (FHEQ Levels 4 & 5)</div>
+      <div class="cred-item"><strong>Foundation Certificate:</strong> University of Sheffield International College, UK</div>
+      <div class="cred-item"><strong>Secondary Education:</strong> International School of London Qatar (35 Total Credits)</div>
+
+      <div class="cred-subhead">Leadership & Public Diplomacy</div>
+      <div class="cred-item"><strong>Model United Nations (MUN):</strong> Extensive experience in diplomatic debate, international resolution drafting, and committee moderation.</div>
+    </div>
+
+    
+    <div class="public-space-card">
+      <div class="public-space-title">🌿 Radical Accessibility & Community Spaces Policy</div>
+      <div style="color: #d1fae5; line-height: 1.4; margin-bottom: 0.5rem;">
+        Mental health support and human connection should never be blocked by economic precarity or commercial paywalls.
+      </div>
+      <div style="color: var(--subtext); font-size: 0.8rem; line-height: 1.35;">
+        In-person sessions can be held in <strong>quiet public gardens, comfortable open-air spaces, or walking grounds</strong> in Ramallah. Meeting in neutral, zero-cost public spaces removes financial pressure, fosters nervous system co-regulation, and restores the natural human dignity of gathering without commercial obligation.
+      </div>
+    </div>
+
+    
+    <div class="menu-card">
+      <div class="menu-header">📋 Mental Health Service Menu & Frameworks</div>
+      
+      <div class="service-item">
+        <div class="service-name">
+          <span>Individual Psychotherapy</span>
+          <span class="price-tag">50 – 100 NIS</span>
+        </div>
+        <div class="service-desc">One-on-one evidence-based therapy sessions tailored for personal growth, anxiety management, and trauma recovery.</div>
+        <span class="format-badge">💻 Online • 🏢 Private Office • 🌿 Public Safe Space</span>
+      </div>
+
+      <div class="service-item">
+        <div class="service-name">
+          <span>Family Therapy</span>
+          <span class="price-tag">100 – 150 NIS</span>
+        </div>
+        <div class="service-desc">Systemic therapy focusing on family communication, conflict resolution, and relational healing.</div>
+        <span class="format-badge">💻 Online • 🏢 Private Office • 🌿 Open Commons</span>
+      </div>
+
+      <div class="service-item">
+        <div class="service-name">
+          <span>Couples Counseling</span>
+          <span class="price-tag">100 – 150 NIS</span>
+        </div>
+        <div class="service-desc">Collaborative sessions designed to strengthen intimacy, active listening, and relationship stability.</div>
+        <span class="format-badge">💻 Online • 🏢 Private Office • 🌿 Outdoor Grounding</span>
+      </div>
+
+      <div class="service-item">
+        <div class="service-name">
+          <span>Group Therapy & Support Circles</span>
+          <span class="price-tag">40 – 60 NIS / person</span>
+        </div>
+        <div class="service-desc">Facilitated peer-support circles using specialized psychological frameworks for collective resilience.</div>
+        <span class="format-badge">👥 Community Parks • 🏢 Community Centers • 💻 Online</span>
+      </div>
+
+      <div style="font-size:0.75rem; color:var(--subtext); margin-top:0.75rem; padding-top:0.5rem; border-top:1px dashed #383838;">
+        💡 <em>Includes transparent equity rates (Student/Community 50 NIS, Women's Equity 75 NIS, Standard 100 NIS) & close network discounts. Pro-bono emergency slots reserved monthly.</em>
+      </div>
+    </div>
+
+    
+    <div class="section-title">Book a Consultation</div>
+    <a href="mailto:hadiaugustpsychology@gmail.com?subject=Private%20Counseling%20Inquiry" class="btn btn-primary">
+      ✉️ Email for Consultation<br>
+      <small style="font-size:0.75rem; color:#9ca3af; font-weight:normal;">hadiaugustpsychology@gmail.com</small>
+    </a>
+    <a href="https://wa.me/970569903815" target="_blank" rel="noopener" class="btn">💬 WhatsApp: +970 56-990-3815 (Ooredoo/Jawwal)</a>
+    <a href="https://wa.me/972599280443" target="_blank" rel="noopener" class="btn">💬 WhatsApp: +972 59-928-0443 (Jawwal / Local)</a>
+    <a href="https://www.instagram.com/hadithepsychologist/" target="_blank" rel="noopener" class="btn">📸 Instagram: @hadithepsychologist</a>
+
+    
+    <div class="section-title">Academic & Language Tutoring</div>
+    <a href="https://preply.com" target="_blank" rel="noopener" class="btn">Book Lesson on Preply</a>
+
+    
+    <div class="section-title">Music & Creative Releases</div>
+    <a href="https://routenote.com" target="_blank" rel="noopener" class="btn">Stream Main Catalog</a>
+    <a href="https://freecords.com" target="_blank" rel="noopener" class="btn">Listen to Beats & Experiments</a>
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- Academic Introduction Video -->
+<div style="max-width: 650px; margin: 40px auto; padding: 25px; background: #1a1a1a; border: 1px solid #333; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: center;">
+    <h3 style="margin-bottom: 15px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #ffffff; font-weight: 500; font-size: 1.1rem;">Watch My Academic Introduction</h3>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; background: #000;">
+        <iframe src="https://www.youtube-nocookie.com/embed/lWWfjh6REnY" 
+                title="Hadi - Academic Psychology Introduction" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+                allowfullscreen>
+        </iframe>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Professional Clinical Intake, Statutory Practice, Security & Compliance Center -->
+<div id="intake-form-section" style="max-width: 750px; margin: 40px auto; padding: 35px; background: #1a1a1a; border: 1px solid #333; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #ffffff;">
+    <h2 style="margin-bottom: 8px; color: #ffffff; font-weight: 500; font-size: 1.4rem; text-align: center;">Clinical Intake, Statutory Compliance & Legal Disclaimers</h2>
+    <p style="color: #aaaaaa; font-size: 0.9rem; text-align: center; margin-bottom: 30px;">All psychological, counseling, and educational services operate under strict statutory regulations, non-pharmacological practice standards, and mandatory security disclaimers.</p>
+
+    <form onsubmit="event.preventDefault(); alert('Intake, statutory waivers, and payment receipt submitted successfully! Verification pending direct banking settlement.');" style="display: flex; flex-direction: column; gap: 20px;">
+        
+        <!-- Section 1: Client Info -->
+        <div style="background: #242424; padding: 20px; border-radius: 8px;">
+            <h4 style="margin-top: 0; color: #3b82f6; font-size: 1rem;">1. Personal & Contact Information</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
+                <div>
+                    <label style="font-size: 0.85rem; color: #ccc; display: block; margin-bottom: 5px;">Full Name / Preferred Alias:</label>
+                    <input type="text" required style="width: 100%; padding: 10px; background: #1a1a1a; border: 1px solid #444; color: #fff; border-radius: 6px;">
+                </div>
+                <div>
+                    <label style="font-size: 0.85rem; color: #ccc; display: block; margin-bottom: 5px;">Email or Contact Handle:</label>
+                    <input type="text" required style="width: 100%; padding: 10px; background: #1a1a1a; border: 1px solid #444; color: #fff; border-radius: 6px;">
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Service Selection & Equity Pricing -->
+        <div style="background: #242424; padding: 20px; border-radius: 8px;">
+            <h4 style="margin-top: 0; color: #3b82f6; font-size: 1rem;">2. Service Modality & Transparent Equity Pricing</h4>
+            <label style="font-size: 0.85rem; color: #ccc; display: block; margin-top: 10px; margin-bottom: 5px;">Select Desired Service:</label>
+            <select style="width: 100%; padding: 10px; background: #1a1a1a; border: 1px solid #444; color: #fff; border-radius: 6px; margin-bottom: 15px;">
+                <option>Individual Psychotherapy & Counseling (50–100 NIS / Sliding Scale)</option>
+                <option>Family Therapy Sessions (100–150 NIS)</option>
+                <option>Couples Counseling (100–150 NIS)</option>
+                <option>Group Therapy Workshops (40–60 NIS per participant)</option>
+                <option>Academic Tutoring & Research Methodology ($24/hr via Preply or Direct)</option>
+            </select>
+
+            <label style="font-size: 0.85rem; color: #ccc; display: block; margin-bottom: 5px;">Primary Presenting Focus or Academic Goal:</label>
+            <textarea rows="3" placeholder="Briefly outline your focus or goals..." style="width: 100%; padding: 10px; background: #1a1a1a; border: 1px solid #444; color: #fff; border-radius: 6px;"></textarea>
+        </div>
+
+        <!-- Section 3: Statutory Practice Authority & Scope -->
+        <div style="background: #242424; padding: 20px; border-radius: 8px; border-left: 4px solid #10b981;">
+            <h4 style="margin-top: 0; color: #10b981; font-size: 1rem;">3. Statutory Practice Authority & Non-Pharmacological Scope</h4>
+            <p style="font-size: 0.85rem; color: #bbb; line-height: 1.5; margin: 5px 0 0 0;">
+                Services are rendered in compliance with statutory regulations and professional union guidelines. Practice is strictly non-pharmacological, evidence-based talk therapy, and academic research coaching. No medical prescriptions or clinical psychiatric medication management are provided.
+            </p>
+        </div>
+
+        <!-- Section 4: Ethics, Confidentiality & Anti-Recording Mandate -->
+        <div style="background: #242424; padding: 20px; border-radius: 8px; border-left: 4px solid #f59e0b;">
+            <h4 style="margin-top: 0; color: #f59e0b; font-size: 1rem;">4. Ethics, Legal Standing & Mandatory Anti-Recording Terms</h4>
+            <p style="font-size: 0.82rem; color: #bbb; line-height: 1.5; margin-bottom: 12px;">
+                Strict privacy and statutory confidentiality govern all sessions. <strong>Unconsented or covert audio/video recording of sessions is strictly illegal, unethical, and results in immediate service termination without refund.</strong> Recording is valid exclusively through prior, explicit written mutual consent.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: #ddd;">
+                <label><input type="checkbox" required> I acknowledge statutory privacy laws and agree that unconsented session recording is strictly illegal.</label>
+                <label><input type="checkbox"> I explicitly request session recording (requires prior written agreement).</label>
+                <label><input type="checkbox" required> I confirm legal capacity to enter into professional counseling or academic mentorship agreements.</label>
+            </div>
+        </div>
+
+        <!-- Section 5: Security Disclaimer & Limitation of Liability -->
+        <div style="background: #242424; padding: 20px; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+            <h4 style="margin-top: 0; color: #8b5cf6; font-size: 1rem;">5. Transmission Security & Liability Disclaimer</h4>
+            <p style="font-size: 0.82rem; color: #bbb; line-height: 1.5; margin-bottom: 12px;">
+                Direct financial settlements take place exclusively through third-party regulated banking systems (Arab Bank PLC / Palestine Monetary Authority iBURAQ networks). The practitioner maintains reasonable electronic safeguards but accepts no liability for third-party network failures, client end-point device vulnerabilities, unencrypted client email transmissions, or local network breaches beyond practitioner control. By submitting this form, the client waives any claims regarding platform web infrastructure security.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.85rem; color: #ddd;">
+                <label><input type="checkbox" required> I accept full responsibility for the security of my own device, connection, and transmission data.</label>
+            </div>
+        </div>
+
+        <!-- Section 6: Direct Pre-Payment & Receipt Upload -->
+        <div style="background: #242424; padding: 20px; border-radius: 8px; border-left: 4px solid #ef4444;">
+            <h4 style="margin-top: 0; color: #ef4444; font-size: 1rem;">6. Pre-Payment Terms, Refunds & Receipt Upload</h4>
+            <p style="font-size: 0.82rem; color: #bbb; line-height: 1.5; margin-bottom: 12px;">
+                All sessions must be paid and verified prior to commencement. Services compensate for reserved professional time and intellectual labor; delivered sessions are strictly non-refundable. Cancellations with less than 24 hours notice forfeit the reserved fee.
+                <br><br>
+                <strong>Direct Bank Wire Details:</strong> Arab Bank Palestine (IBAN: PS68...) / Local Instant Transfer (iBURAQ).
+            </p>
+
+            <label style="font-size: 0.85rem; color: #ccc; display: block; margin-bottom: 5px;">Upload Transfer Receipt / Screenshot:</label>
+            <input type="file" required style="width: 100%; padding: 8px; background: #1a1a1a; border: 1px solid #444; color: #fff; border-radius: 6px; margin-bottom: 15px;">
+
+            <label style="font-size: 0.85rem; color: #ccc; display: block; margin-bottom: 5px;">Payment Settlement Method:</label>
+            <select style="width: 100%; padding: 10px; background: #1a1a1a; border: 1px solid #444; color: #fff; border-radius: 6px;">
+                <option>Direct Bank Wire / iBURAQ (Arab Bank Palestine)</option>
+                <option>Preply Platform Secure Checkout (For Academic Tutoring)</option>
+                <option>Local Direct Settlement / Cash Voucher</option>
+            </select>
+        </div>
+
+        <button type="submit" style="background: #3b82f6; color: white; padding: 12px; border: none; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s;">Acknowledge Terms & Verify Booking</button>
+    </form>
+</div>
+
 </body>
 </html>
