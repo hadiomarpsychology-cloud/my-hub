@@ -18,10 +18,10 @@
         body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding: 30px 15px; display: flex; flex-direction: column; align-items: center; min-height: 100vh; }
         .container { max-width: 600px; width: 100%; }
         
-        header { text-align: center; margin-bottom: 25px; }
+        header { text-align: center; margin-bottom: 30px; }
         h1 { font-size: 2.2rem; font-weight: 800; margin-bottom: 6px; letter-spacing: -0.025em; }
         .subtitle { color: var(--text-main); font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
-        .sub-desc { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 15px; }
+        .sub-desc { color: var(--text-muted); font-size: 0.85rem; }
         
         .section-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin: 25px 0 10px 4px; font-weight: 700; }
         
@@ -30,7 +30,7 @@
         .card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; color: var(--text-main); }
         .card p { color: var(--text-muted); font-size: 0.85rem; margin-bottom: 12px; }
         
-        .btn { display: block; width: 100%; text-align: center; background-color: var(--card-bg); border: 1px solid var(--accent); color: var(--accent); font-weight: 600; padding: 12px 18px; border-radius: 8px; text-decoration: none; transition: all 0.2s; margin-bottom: 10px; font-size: 0.9rem; }
+        .btn { display: block; width: 100%; text-align: center; background-color: var(--card-bg); border: 1px solid var(--accent); color: var(--accent); font-weight: 600; padding: 12px 18px; border-radius: 8px; text-decoration: none; transition: all 0.2s; margin-bottom: 10px; font-size: 0.9rem; cursor: pointer; }
         .btn:hover { background-color: var(--accent); color: #000; }
         
         audio { width: 100%; margin-top: 8px; accent-color: var(--accent); display: block; }
@@ -44,7 +44,6 @@
         .form-section-title { font-size: 0.8rem; font-weight: 700; color: var(--text-main); margin: 14px 0 6px 0; border-bottom: 1px solid var(--border-color); padding-bottom: 4px; }
         label { display: block; font-size: 0.75rem; color: var(--text-muted); margin-bottom: 3px; }
         input, select, textarea { width: 100%; background: #0b0f19; border: 1px solid var(--border-color); color: var(--text-main); padding: 9px; border-radius: 6px; font-size: 0.85rem; margin-bottom: 8px; }
-        input[type="file"] { padding: 5px; }
         .checkbox-group { display: flex; align-items: flex-start; gap: 8px; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 6px; }
         .checkbox-group input { width: auto; margin-top: 2px; }
 
@@ -57,7 +56,6 @@
             <h1>Hadi Omar</h1>
             <div class="subtitle">Psychological Counselor • Educator • Musician</div>
             <div class="sub-desc">M.Sc. Candidate | Global Resonance Practice</div>
-            <a href="https://www.instagram.com/hadithepsychologist/" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.1); border-color: var(--accent);">📸 Instagram: @hadithepsychologist</a>
         </header>
 
         <!-- Complimentary Gift Audio -->
@@ -71,7 +69,7 @@
         </div>
 
         <div class="section-title">Direct Booking & Consultations</div>
-        <a href="mailto:hadiomarpsychology@gmail.com" class="btn">📧 Email for Private Consultation</a>
+        <a href="mailto:hadiaugustpsychology@gmail.com" class="btn">📧 Email for Private Consultation</a>
         <a href="https://wa.me/970569903815" target="_blank" class="btn">💬 WhatsApp: +970 56-990-3815</a>
 
         <div class="rates-box">
@@ -85,10 +83,6 @@
         <div class="section-title">Academic & Tutoring</div>
         <a href="https://www.preply.com" target="_blank" class="btn">📚 Book Lesson on Preply ($30 / hr)</a>
 
-        <div class="section-title">Music & Creative Releases</div>
-        <a href="#" class="btn">🎧 Stream Main Catalog</a>
-        <a href="#" class="btn">🎵 Listen to Beats & Experiments</a>
-
         <div class="section-title">Master Publication</div>
         <div class="card">
             <h2>📖 The Architecture of Containment</h2>
@@ -96,22 +90,22 @@
             <a href="The_Architecture_of_Containment_Complete_Master.txt" class="btn" download style="margin-bottom: 0;">Download Master Text</a>
         </div>
 
-        <!-- Clinical Intake & Fast WhatsApp Verification Form -->
-        <div class="section-title">Clinical Intake & Instant Verification</div>
+        <!-- Automated 1-Click WhatsApp & Calendar Booking Form -->
+        <div class="section-title">Instant Consultation Booking</div>
         <div class="card">
-            <h2>Submit Booking & Receipt Proof</h2>
-            <p>Complete your intake details and attach your transfer receipt for rapid verification.</p>
+            <h2>Book Your Session</h2>
+            <p>Select your date/time to send details directly via WhatsApp and generate a calendar invite.</p>
             
             <form onsubmit="handleFormSubmit(event)">
-                <div class="form-section-title">1. Personal & Contact Information</div>
+                <div class="form-section-title">1. Personal Details</div>
                 <label>Full Name / Preferred Alias:</label>
                 <input type="text" id="clientName" required placeholder="Enter your name">
                 
-                <label>Email or Contact Handle:</label>
-                <input type="text" id="clientContact" required placeholder="Email or phone/WhatsApp">
+                <label>Contact Email or Phone:</label>
+                <input type="text" id="clientContact" required placeholder="Email or WhatsApp number">
 
-                <div class="form-section-title">2. Service Modality</div>
-                <label>Select Desired Service:</label>
+                <div class="form-section-title">2. Modality & Preferred Schedule</div>
+                <label>Select Service:</label>
                 <select id="serviceType">
                     <option>Individual Psychotherapy (50-100 NIS / Sliding Scale)</option>
                     <option>Family Therapy (100-150 NIS)</option>
@@ -120,23 +114,17 @@
                     <option>Preply Tutoring ($30 / hr)</option>
                 </select>
 
+                <label>Preferred Date & Time:</label>
+                <input type="datetime-local" id="sessionDateTime" required>
+
                 <label>Primary Focus or Goal:</label>
-                <textarea id="clientGoals" rows="2" placeholder="Briefly outline your focus..."></textarea>
+                <textarea id="clientGoals" rows="2" placeholder="Briefly outline what you'd like to address..."></textarea>
 
-                <div class="form-section-title">3. Safety & Compliance Agreements</div>
-                <div class="checkbox-group"><input type="checkbox" required><span>I acknowledge statutory privacy laws and agree that unconsented session recording is strictly illegal.</span></div>
-                <div class="checkbox-group"><input type="checkbox" required><span>I explicitly request session recording (requires prior written agreement).</span></div>
-                <div class="checkbox-group"><input type="checkbox" required><span>I confirm legal capacity to enter into professional agreements.</span></div>
-
-                <div class="form-section-title">4. Transfer Receipt Upload</div>
-                <p style="font-size: 0.7rem; color: var(--text-muted); margin-bottom: 6px;">
-                    Direct Bank Wire: Arab Bank Palestine (IBAN: PS68...) / Local Instant Transfer (BURAQ).
-                </p>
-                <label>Upload Receipt / Screenshot:</label>
-                <input type="file" id="receiptFile" required>
+                <div class="form-section-title">3. Compliance</div>
+                <div class="checkbox-group"><input type="checkbox" required><span>I acknowledge statutory privacy laws regarding clinical consultation.</span></div>
 
                 <button type="submit" class="btn" style="background: var(--accent); color: #000; font-weight: 700; margin-top: 12px; margin-bottom: 0;">
-                    Verify Booking Instantly via WhatsApp
+                    📅 Send WhatsApp Booking & Create Calendar Link
                 </button>
             </form>
         </div>
@@ -152,12 +140,19 @@
             const name = document.getElementById('clientName').value;
             const contact = document.getElementById('clientContact').value;
             const service = document.getElementById('serviceType').value;
+            const datetimeVal = document.getElementById('sessionDateTime').value;
             const goals = document.getElementById('clientGoals').value;
-            const fileInput = document.getElementById('receiptFile');
-            const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : "No file attached";
 
-            const message = `*New Booking & Intake Submission*%0A*Name:* ${name}%0A*Contact:* ${contact}%0A*Service:* ${service}%0A*Goals:* ${goals}%0A*Receipt Attached:* ${fileName}%0A%0A_Please verify my payment receipt._`;
+            const startDate = new Date(datetimeVal);
+            const endDate = new Date(startDate.getTime() + (60 * 60 * 1000));
+            const isoStart = startDate.toISOString().replace(/-|:|\.\d\d\d/g, "");
+            const isoEnd = endDate.toISOString().replace(/-|:|\.\d\d\d/g, "");
+
+            const calUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent('Psychological Consultation - ' + service)}&dates=${isoStart}/${isoEnd}&details=${encodeURIComponent('Client: ' + name + '\nContact: ' + contact + '\nFocus: ' + goals)}&add=${encodeURIComponent(contact)}`;
+
+            const message = `*New Booking Request*%0A*Name:* ${encodeURIComponent(name)}%0A*Contact:* ${encodeURIComponent(contact)}%0A*Service:* ${encodeURIComponent(service)}%0A*Requested Date/Time:* ${encodeURIComponent(datetimeVal)}%0A*Focus:* ${encodeURIComponent(goals)}%0A%0A*Calendar Link:* ${encodeURIComponent(calUrl)}`;
             
+            window.open(calUrl, '_blank');
             window.open(`https://wa.me/970569903815?text=${message}`, '_blank');
         }
     </script>
