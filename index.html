@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadi Omar | Psychology Practitioner & Academic Hub</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+            --text-main: #c9d1d9;
+            --text-muted: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-yellow: #d29922;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Fira Code', 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .banner {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .banner h1 {
+            margin: 0 0 10px 0;
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+        }
+
+        .banner p {
+            margin: 5px 0;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .cta-buttons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background-color: #21262d;
+            border: 1px solid var(--border-color);
+            color: var(--accent-blue);
+            padding: 8px 16px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #30363d;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-green);
+            color: #000;
+            font-weight: bold;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #2ea043;
+        }
+
+        .terminal-window {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .terminal-header {
+            background-color: #21262d;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .buttons { display: flex; gap: 8px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background-color: #ff5f56; }
+        .yellow { background-color: #ffbd2e; }
+        .green { background-color: #27c93f; }
+
+        .title {
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .terminal-body {
+            padding: 20px;
+            max-height: 70vh;
+            overflow-y: auto;
+            line-height: 1.6;
+        }
+
+        .prompt-line { display: flex; margin-top: 10px; }
+        .prompt { color: var(--accent-green); font-weight: bold; }
+        .path { color: var(--accent-blue); }
+        .command { color: #ffffff; margin-left: 8px; }
+
+        .output {
+            color: var(--text-main);
+            white-space: pre-wrap;
+            margin-bottom: 15px;
+        }
+
+        .input-line {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            outline: none;
+            width: 100%;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="banner">
+        <h1>Hadi Omar | M.Sc. Candidate & Mental Health Practitioner</h1>
+        <p>Union Reg. #410981989 | Specialized in Trauma-Informed Care, Sound Therapy & Academic Coaching</p>
+        <p>Operating on a flexible sliding-scale / community pricing model.</p>
+        
+        <div class="cta-buttons">
+            <a href="mailto:hadiomarpsychology@gmail.com" class="btn">📧 Email Me</a>
+            <a href="https://wa.me/970569903815" target="_blank" class="btn">💬 WhatsApp (+970 56 990 3815)</a>
+            <a href="https://hadiomarpsychology-cloud.github.io/my-hub/" target="_blank" class="btn btn-primary">🔗 Official Hub & Intake Booking</a>
+        </div>
+    </div>
+
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <div class="buttons">
+                <div class="dot red"></div>
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+            </div>
+            <div class="title">hadiomar@psychology-hub:~</div>
+        </div>
+
+        <div class="terminal-body" id="terminal-body">
+            <div class="output">
+================================================================================
+Welcome to Hadi Omar's Interactive Digital Hub & Professional Terminal
+================================================================================
+Type <span style="color:var(--accent-yellow)">'help'</span> to see all available commands.
+Quick commands: <span style="color:var(--accent-yellow)">'services'</span>, <span style="color:var(--accent-yellow)">'budget'</span>, <span style="color:var(--accent-yellow)">'relocation'</span>, <span style="color:var(--accent-yellow)">'bank'</span>, <span style="color:var(--accent-yellow)">'tracker'</span>
+            </div>
+
+            <div id="history"></div>
+
+            <div class="input-line">
+                <span class="prompt">hadiomar@hub</span>:<span class="path">~</span>$
+                <input type="text" id="command-input" autofocus autocomplete="off">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const input = document.getElementById('command-input');
+    const history = document.getElementById('history');
+    const terminalBody = document.getElementById('terminal-body');
+
+    const trackerData = {
+        immediateTargetUSD: 2546,
+        immediateRaisedUSD: 0,
+        relocationTargetEUR: 4600,
+        relocationRaisedEUR: 0
+    };
+
+    const commands = {
+        help: `Available Terminal Commands:
+  - bio         : Professional summary & credentials
+  - services    : Psychotherapy, consultation, sound therapy & academic coaching
+  - budget      : Immediate 3-month living & degree completion budget ($2,546 USD)
+  - relocation  : EU visa, biometrics & relocation expense breakdown (€4,600+ EUR)
+  - bank        : Direct Arab Bank IBAN & wire transfer details
+  - tracker     : Live funding progress & transparency tracker
+  - contact     : WhatsApp, phone, email & booking links
+  - clear       : Clear terminal screen`,
+
+        bio: `Hadi Omar — M.Sc. Candidate in Psychology (An-Najah National University)
+- Union Reg. #410981989
+- 12 Credit Hours remaining until M.Sc. graduation (tuition fully covered).
+- Specializations: Trauma-informed care, stress management (Hi-Tops framework), sound therapy, and academic research coaching.`,
+
+        services: `OFFERED PROFESSIONAL SERVICES (Sliding-Scale / Community Pricing):
+1. Individual & Group Psychotherapy / Consultation (Trauma-informed & stress management).
+2. Academic & Language Coaching (For students, researchers, thesis editing & IRB prep).
+3. Complementary Sound & Music Therapy Sessions (Grounding tracks & sessions).
+
+Book via Hub: https://hadiomarpsychology-cloud.github.io/my-hub/`,
+
+        budget: `IMMEDIATE 3-MONTH SURVIVAL & COMPLETION BUDGET:
++------------------------------------+----------------+------------------+
+| Expense Category                   | Monthly (USD)  | 3-Month Target   |
++------------------------------------+----------------+------------------+
+| Rent                               | $387           | $1,161           |
+| Electricity & Utilities            | $45            | $135             |
+| Groceries & Provisions             | $200           | $600             |
+| Local Grocery Debt Settlement      | $50 (One-time) | $50              |
+| Academic Relocation & Visa Prep    | $300           | $300             |
+| Emergency Buffer                   | $100           | $300             |
++------------------------------------+----------------+------------------+
+| TOTAL IMMEDIATE TARGET             |                | ~$2,546 USD      |
++------------------------------------+----------------+------------------+`,
+
+        relocation: `EU VISA & INTERNATIONAL RELOCATION EXPENSE BREAKDOWN:
+
+Category                         Estimated Cost (Euro)   Notes
+-------------------------------------------------------------------------------------------------
+Visa, Biometrics & Translations  €150 – €250             Includes degree translation & legalization.
+One-way Flight (Jordan/TLV-EU)   €250 – €500             Depends heavily on season & baggage.
+Temporary Stay (First 2 weeks)   €400 – €800             Airbnb or hostel while apartment hunting.
+Rental Deposit & 1st Month Rent  €1,800 – €3,000         Standard 2-month euro deposit requirement.
+Setting Up (Food, Sim, Bedding)  €500                    Essential furniture & local transport.
+Emergency Buffer                 €1,500 – €2,000         Safety net before first corporate paycheck.
+-------------------------------------------------------------------------------------------------
+ESTIMATED TOTAL RELOCATION RANGE: €4,600 – €7,050`,
+
+        bank: `DIRECT BANK WIRE DETAILS (Arab Bank PLC):
+
+Account Holder Name : Hadi Hasan Mohammed-Saleh Omar
+Bank Name           : Arab Bank PLC
+Branch              : Ramallah / Nablus Branch
+Account SWIFT / BIC : [Insert Your SWIFT Code]
+IBAN Number         : [Insert Your PS... IBAN Number]
+
+* Note for senders: Please mark transfer notes as "Personal Gift", "Services", or "Living Support".`,
+
+        contact: `CONTACT & BOOKING CHANNELS:
+- Official Hub & Booking: https://hadiomarpsychology-cloud.github.io/my-hub/
+- WhatsApp / Phone      : +970 56 990 3815
+- Email                 : hadiomarpsychology@gmail.com`
+    };
+
+    function renderTracker() {
+        const immPct = Math.min(100, Math.round((trackerData.immediateRaisedUSD / trackerData.immediateTargetUSD) * 100));
+        const relPct = Math.min(100, Math.round((trackerData.relocationRaisedEUR / trackerData.relocationTargetEUR) * 100));
+
+        return `FUNDING PROGRESS & SOCIAL ACCOUNTABILITY TRACKER:
+
+1. Immediate Living & Completion Target ($2,546 USD):
+Raised: $${trackerData.immediateRaisedUSD} / $${trackerData.immediateTargetUSD} USD (${immPct}%)
+[${'='.repeat(Math.floor(immPct / 5))}${' '.repeat(20 - Math.floor(immPct / 5))}]
+
+2. EU Relocation & Visa Target (€4,600 EUR):
+Raised: €${trackerData.relocationRaisedEUR} / €${trackerData.relocationTargetEUR} EUR (${relPct}%)
+[${'='.repeat(Math.floor(relPct / 5))}${' '.repeat(20 - Math.floor(relPct / 5))}]
+
+* Note: Manually updated for full transparency.`;
+    }
+
+    input.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+            const cmd = input.value.trim().toLowerCase();
+            input.value = '';
+
+            const promptElement = document.createElement('div');
+            promptElement.className = 'prompt-line';
+            promptElement.innerHTML = `<span class="prompt">hadiomar@hub</span>:<span class="path">~</span>$ <span class="command">${cmd}</span>`;
+            history.appendChild(promptElement);
+
+            const outputElement = document.createElement('div');
+            outputElement.className = 'output';
+
+            if (cmd === 'clear') {
+                history.innerHTML = '';
+                return;
+            } else if (cmd === 'tracker') {
+                outputElement.textContent = renderTracker();
+            } else if (commands[cmd]) {
+                outputElement.textContent = commands[cmd];
+            } else if (cmd !== '') {
+                outputElement.textContent = `Command not found: ${cmd}. Type 'help' for available commands.`;
+            }
+
+            history.appendChild(outputElement);
+            terminalBody.scrollTop = terminalBody.scrollHeight;
+        }
+    });
+</script>
+
+</body>
+</html>
