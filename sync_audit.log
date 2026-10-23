@@ -1,0 +1,63 @@
+[2026-10-20 17:32:34] SUCCESS: Added reminder to macOS -> 'Bank & Financial Readiness Verification'
+[2026-10-20 17:32:35] WARNING: Redmi 15c connected but USB debugging authorization pending or device offline.
+[2026-10-20 17:32:35] SKIPPED: Redmi broadcast skipped due to inactive USB bridge for -> 'Bank & Financial Readiness Verification'
+[2026-10-20 17:42:43] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 20, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:43] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:43] DEPLOYED: DAY 1: Submit UNRWA Micro-Loan & UNHCR Letters
+[2026-10-20 17:42:43] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 21, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:43] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:43] DEPLOYED: DAY 2: Passport Renewal Submission
+[2026-10-20 17:42:44] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 22, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:44] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:44] DEPLOYED: DAY 3: Arab Bank iBURAQ & Compliance Clearance
+[2026-10-20 17:42:45] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 23, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:45] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:45] DEPLOYED: DAY 4: Intensive Preply & Client Intake Push
+[2026-10-20 17:42:45] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 24, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:45] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:45] DEPLOYED: DAY 5: Mid-Way Financial Audit & Sustenance Check
+[2026-10-20 17:42:46] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 25, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:46] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:46] DEPLOYED: DAY 6: UNRWA Loan Status Follow-Up
+[2026-10-20 17:42:47] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 26, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:47] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:47] DEPLOYED: DAY 7: An-Najah Academic Progress & Research Block
+[2026-10-20 17:42:47] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 27, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:47] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:47] DEPLOYED: DAY 8: Rent Reserve Allocation
+[2026-10-20 17:42:48] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 28, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:48] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:48] DEPLOYED: DAY 9: Final Rent Preparation & Client Verification
+[2026-10-20 17:42:49] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 29, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:42:49] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:42:49] DEPLOYED: DAY 10: RENT DUE DATE & Full Settlement
+[2026-10-20 17:44:25] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 20, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:25] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:25] DEPLOYED: DAY 1: Submit UNRWA Micro-Loan & UNHCR Letters
+[2026-10-20 17:44:26] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 21, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:26] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:26] DEPLOYED: DAY 2: Passport Renewal Submission
+[2026-10-20 17:44:27] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 22, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:27] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:27] DEPLOYED: DAY 3: Arab Bank iBURAQ & Compliance Clearance
+[2026-10-20 17:44:28] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 23, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:28] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:28] DEPLOYED: DAY 4: Intensive Preply & Client Intake Push
+[2026-10-20 17:44:29] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 24, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:29] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:29] DEPLOYED: DAY 5: Mid-Way Financial Audit & Sustenance Check
+[2026-10-20 17:44:31] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 25, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:31] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:31] DEPLOYED: DAY 6: UNRWA Loan Status Follow-Up
+[2026-10-20 17:44:32] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 26, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:32] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:32] DEPLOYED: DAY 7: An-Najah Academic Progress & Research Block
+[2026-10-20 17:44:33] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 27, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:33] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:33] DEPLOYED: DAY 8: Rent Reserve Allocation
+[2026-10-20 17:44:34] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 28, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:35] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:35] DEPLOYED: DAY 9: Final Rent Preparation & Client Verification
+[2026-10-20 17:44:36] AppleScript Error: 95:136: execution error: Calendar got an error: Can’t get date "October 29, 2026 9:00:00 AM" of calendar "Calendar". (-1728)
+[2026-10-20 17:44:36] NOTICE: Redmi 15c offline or USB debugging authorization pending.
+[2026-10-20 17:44:36] DEPLOYED: DAY 10: RENT DUE DATE & Full Settlement
